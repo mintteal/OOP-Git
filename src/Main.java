@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Main 
@@ -10,6 +11,7 @@ public class Main
 //		System.out.println(Laskuri.laskePintaAla(3));
 		
 		Scanner in = new Scanner (System.in);
+		DecimalFormat df = new DecimalFormat("##.##");
 		
 		String answer;
 		double pituus, leveys, sade;
@@ -33,7 +35,7 @@ public class Main
 			System.out.println("Anna säde");
 			sade = Double.parseDouble(in.nextLine());
 			
-			System.out.println(Laskuri.laskePintaAla(sade));
+			System.out.println(df.format(Laskuri.laskePintaAla(sade)));
 		}
 	}
 
